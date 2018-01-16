@@ -13,3 +13,7 @@ sudo chown cabox:apache -R /home
 #eval $(ssh-agent -s)
 
 #ssh-add ~/.ssh/id_rsa
+
+
+#git config credential.helper 'cache --timeout=300'
+#git config credential.helper 'store [options]       ~/.git-credentials
