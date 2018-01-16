@@ -50,7 +50,7 @@ gerenciando o prédio de seu condomínio com atividades mensais.</div>
 <pre>
 <div id="foot">
 <footer id="footer" style="font-size:11px;font-weight: bold;">
-Alexsander,Alexsei & Edcarlos 
+ Alexsander,Alexsei & Edcarlos 
      Rebouças  
 &copy; Copyright 2017 Vostrus sec & GoldxEnginharia</footer></div>
 </body></pre>
