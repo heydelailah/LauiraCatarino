@@ -7,7 +7,7 @@ session_destroy();
 //include("php/conexao.php");
 $host="localhost";
 $user="root";
-$pass="alxsy514";
+$pass="";
 $db="gdx";
 $mysqli = new mysqli($host,$user,$pass,$db);
 if($mysqli->connect_errno)

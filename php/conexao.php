@@ -3,7 +3,7 @@ session_start();
 
 $host="localhost";
 $user="root";
-$pass="alxsy514";
+$pass="";
 $db="gdx";
 
 //$username=$_GET["email"];

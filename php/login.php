@@ -15,7 +15,7 @@ $db = mysql_select_db($db);
 
 if (isset($entrar)) {
    
-	     $verifica = mysql_query("SELECT nome,pass FROM morador WHERE nome= '$login' AND pass = '$senha'") or die("erro ao selecionar");
+	     $verifica = mysql_query("SELECT email,pass FROM morador WHERE email= '$login' AND pass = '$senha'") or die("erro ao selecionar");
       //$verifica2 = mysql_query("SELECT nome FROM fatura WHERE nome= '$login'") or die("erro ao selecionar");
  
   if (mysql_num_rows($verifica)<=0){
