@@ -1,10 +1,11 @@
 <?php
 session_start();
 if($_SESSION['email']=$_SESSION['email']){
-$host="localhost";
-$user="root";
-$pass="";
-$db="gdx";
+include "conexao.php";
+	//$host="localhost";
+//$user="root";
+//$pass="";
+//$db="gdx";
 //	include('conexao3.php');
 //$username=$_GET["email"];
 
@@ -12,11 +13,7 @@ $mysqli = new mysqli($host,$user,$pass,$db);
 if($mysqli->connect_errno)
 echo "falha ".$mysqli->connect_erno;
 
-$consulta="select status,data,agua,luz,gas,cond,extra,gas,gasto from fatura where email='$_SESSION[email]' order by id desc limit 1";
-//$consulta="select status,data,agua,luz,gas,cond,extra,gas,gasto from fatura where email='$_SESSION[email]' and data='$dt'";
-
-//$consulta="select status,data,agua,luz,gas,cond,extra,gas,gasto from fatura where email='$username' order by id desc limit 1";
-$consulta2="select * from morador where email='$_SESSION[email]'";
+/*$consulta2="select * from morador where email='$_SESSION[email]'";
 $consulta3="select data from fatura where email='$_SESSION[email]' order by id desc";
 $consulta4="select data from fatura where email='$_SESSION[email]'";
 
@@ -25,7 +22,7 @@ $con=$mysqli->query($consulta) or die($mysqli->error);
 $con2=$mysqli->query($consulta2) or die($mysqli->error);
 $con3=$mysqli->query($consulta3) or die($mysqli->error);
 ini_set('default_charset','UTF-8');
-
+*/
 
 
 
@@ -68,32 +65,6 @@ $connect = mysqli_connect("localhost", "root", "", "gdx");
         echo "</div>";  
 			
 		}
-		/*
-		 while($row = mysqli_fetch_array($result))  
-     	while($row2 = mysqli_fetch_array($result2))  
-      {  
-		 {  
-			     echo "<div id='td1' style='font-weight: bold;font-size:14px;'><p>";
-        echo "Nome:".$row2["nome"];echo "\t\t\t\t\t\tÁgua:\t".$row["agua"]."<br>";
-        echo "Email:".$row2["email"];echo "\t\t\t\tLuz:\t".$row["luz"]."<br>";
-        echo "Cargo:".$row2["cargo"];echo "\t\t\t\t\t\t\tgás:\t".$row["gas"]."<br>";
-        echo "Contrato:".$row2["contrato"];echo "\t\t\t\t\t\t\tCond:\t".$row["cond"]."<br>";
-        echo "Sexo:".$row2["sexo"];echo "\t\t\t\t\t\t\tExtra:\t".$row["extra"]."<br>";
-        echo "Telefone:".$row2["telefone"];echo "\t\t\t\t\t\tTotal:\t".$row["gasto"]."<br>";
-        echo "Status:".$row["status"]."<br>";
-        echo "</div>";  
-			}}
-*/	
-			 /*
-			 echo "<td style='font-weight: bold;font-size:14px;'>";
-		 echo "Água:\t".$row["agua"]."<br>";
-        echo "Luz:\t".$row["luz"]."<br>";
-        echo "gás:\t".$row["gas"]."<br>";
-        echo "Cond:\t".$row["cond"]."<br>";
-        echo "Extra:\t".$row["extra"]."<br>";
-        echo "Total:\t".$row["gasto"]."<br>";
-        echo "Status:".$row["status"]."<br>";
-			 echo "</td>"; */
 		 }	
 	
 	
@@ -146,14 +117,11 @@ $connect = mysqli_connect("localhost", "root", "", "gdx");
 <style>@import url('../css/dados.css')</style>
 <script src="../js/dados.js"></script>
 <script src="../js/index.js"></script>
-	    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
-      -->
 	<script src="../js/bootstrap.min.js"></script>
 		<script src="../js/jquery.min.js"></script>
 	
 	<body><pre><img id="logo" src="..\img\Residencial_transp2.png">		
-<div id="menu"><ul><li><a href="dados.php">Inicial</a></li><br><li><a href="settings.php">Configuração</a></li><br><li><a href="../index.php">Sair</a></li></ul></div>
+<div id="menu"><ul><li><a href="dados.php">Inicial</a></li><br><li><a href="settings.php">administração</a></li><br><li><a href="../index.php">Sair</a></li></ul></div>
 <?php print $_SESSION['email'];?><h4 id="emailInicial"><?php	echo "<strong>Seja Bem-vindo(a) ao seu recibo digital</strong>\n";?><!--<?php	echo "você está logado com:<strong>$_SESSION[email]</strong>\n";?>--></h4><!--<?php echo "\tBem vindo ao painel Residencial!\n"; ?>--><br><!--<input type=button id="exitbutton"value="exit" onclick="href=exit()">-->
 <div id="galeria"></div><table>
 <form action="email.php" method="post"><fieldset><legend>Sua opinião</legend>

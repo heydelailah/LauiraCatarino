@@ -1,5 +1,5 @@
 <?php
-include "./php/func.php";
+include "php/func.php";
 include "./php/morador.php";
 ?>
 <!DOCTYPE html>
@@ -18,12 +18,15 @@ include "./php/morador.php";
   </style>
   
 <body>
-<?php
-  //imp();
-  ///soma();
-  $mm=new morador();
-  echo "ur namme ".$mm->setNome("alexsy");
-  print $mm->getNome();
-  ?>  
+  <di
+
+ <ul>
+   <li>Edfício:<?php echo calcular(1,1,1,2);?></li>
+   <li>Condominio:<?php echo calcular(1,1,1,2);?>  </li>
+   <li>Coelba:<?php echo calcular(1,1,1,2);?>  </li>
+   <li>Embasa:<?php echo calcular(1,1,1,2);?>  </li>
+   <li>Limpeza:<?php echo calcular(1,1,1,2);?>  </li>
+  <li>Total:<?php echo calcular(1,1,1,2);?>  </li>
+ </ul>
 </body>
 </html>

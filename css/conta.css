@@ -1,0 +1,14 @@
+body{
+margin:0;
+	/*background-image:url("C:\Program Files\EasyPHP-12.1\www\goldx\img\oie.png");
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;background-size: cover;"
+*//*
+background-image:url("..\\img\\oie.png");
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;background-size: cover;"
+*/
+background-color:rgba(31,27,27,.9);
+}
