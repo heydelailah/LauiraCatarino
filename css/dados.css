@@ -69,18 +69,22 @@ right:16px;
 float:left;
 
 }
-#menu ul li{ 
+#menu ul li{
+	display:inline;
 float:left;
 font:16px system;
 }
 
 #menu ul li:hover{ 
-background:#eee;
+//background:#eee;
+	background:rgba(240,255,255.2)
 }
 
 
 #menu ul li a{ 
     padding: 2px 1px;
 display:inline-block;
+	text-decoration:none;
+	color:white;
 }
 

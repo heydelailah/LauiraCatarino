@@ -9,7 +9,7 @@ $host="localhost";
 $user="root";
 $pass="";
 $db="gdx";
-$mysqli = new mysqli($host,$user,$pass,$db);
+/*$mysqli = new mysqli($host,$user,$pass,$db);
 if($mysqli->connect_errno)
 echo "falha ".$mysqli->connect_erno;
 $nome;
@@ -18,6 +18,25 @@ $nome=$t;
 	echo $nome;
 
 }
+*/try{
+$conexao_banco=new PDO("mysql:host=localhost;dbname=gdx","root","");
+}
+catch(PDOException $e){
+	echo $e->getMessage();
+}
+
+//$buscar_sindico=$conexao_banco->query("select * from morador");
+//echo "quantiadde de usuarios encontrados ".$buscar_sindico->rowCount();
+$buscar_sindico=$conexao_banco->prepare("select * from morador");
+$buscar_sindico->execute();
+while($x=$buscar_sindico->fetch(PDO::FETCH_ASSOC)){
+echo "nome:".$x["nome"]."<br>";
+	echo "pass:".$x["pass"];
+
+}
+	//$buscar_sindico->execute();
+//echo "quantidade de usuarios encontrados ".$buscar_sindico->rowCount();
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

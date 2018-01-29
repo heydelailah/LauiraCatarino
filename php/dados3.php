@@ -121,15 +121,15 @@ $connect = mysqli_connect("localhost", "root", "", "gdx");
 		<script src="../js/jquery.min.js"></script>
 	
 	<body><pre><img id="logo" src="..\img\Residencial_transp2.png">		
-<div id="menu"><ul><li><a href="dados.php">Inicial</a></li><br><li><a href="settings.php">administração</a></li><br><li><a href="../index.php">Sair</a></li></ul></div>
-<?php print $_SESSION['email'];?><h4 id="emailInicial"><?php	echo "<strong>Seja Bem-vindo(a) ao seu recibo digital</strong>\n";?><!--<?php	echo "você está logado com:<strong>$_SESSION[email]</strong>\n";?>--></h4><!--<?php echo "\tBem vindo ao painel Residencial!\n"; ?>--><br><!--<input type=button id="exitbutton"value="exit" onclick="href=exit()">-->
+<div id="menu"><ul><li><a href="dados3.php">Inicial</a></li><br><li><a href="settings.php">administração</a></li><br><li><a href="../index.php">Sair</a></li></ul></div>
+<?php print $_SESSION['email'];?><h4 id="emailInicial"><?php	echo "<strong>Seja Bem-vindo(a) ao seu painel Condomínial</strong>\n";?><!--<?php	echo "você está logado com:<strong>$_SESSION[email]</strong>\n";?>--></h4><!--<?php echo "\tBem vindo ao painel Residencial!\n"; ?>--><br><!--<input type=button id="exitbutton"value="exit" onclick="href=exit()">-->
 <div id="galeria"></div><table>
 <form action="email.php" method="post"><fieldset><legend>Sua opinião</legend>
 <label for ="opiniao"></label>
 O que precisamos melhorar na página?
 <textarea cols=60 rows="10" name="feedback" id="feedback" maxlength="500" wrap="hard" placeholder="coragem, você consegue !">
 </textarea><input id="inputfeedback" type="submit" value="enviar"></fieldset></form>
-<h3>Informações Pessoais 					Gastos</h3>
+<h3>Informações do Prédio 					Gastos</h3>
 <select name="datinha" id="datinha" onchange="">Data<option value="Atual">Data</option> <?php echo ImprimindoData($connect); ?> </select>
 <?php Iniciando($connect);?>
                      <div class="row" id="info"><!--<?php echo  Iniciando($connect);?> --><?php echo Imprimindo($connect);?></div>  
