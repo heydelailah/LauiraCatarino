@@ -1,9 +1,11 @@
 <?php
+include "ceo.php";
+require_once "cond.php";
 session_start();
 if($_SESSION['email']=$_SESSION['email']){
+$c1 = new cond();
 
-echo "<strong>$_SESSION[email]</strong>\n";
-//session_destroy();
+	//session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -16,8 +18,12 @@ echo "<strong>$_SESSION[email]</strong>\n";
 
 	<link rel="stylesheet" type="text/css" href=".\css\index.css">
 	<body><pre><img id="logo" src="..\img\Residencial_transp2.png">		
-<div id="menu"><ul><li><a href="dados3.php">Inicial</a></li><li><a href="settings.php">Configurações</a></li><li><a href="../index.php">Sair</a></li></ul></div>
-
+<div id="menu"><ul><li><a href="dados3.php">Inicial</a></li><br>
+<li><a href="settings.php">administração</a></li><br>
+<li><a href="../index.php">Sair</a></li>
+</ul>
+</div>
+<!--<?php print $_SESSION['email'];?>--><h3 id="emailInicial"><?php	echo "\t\t\t<strong>CONDOMÍNIO ".$c1->getNome()." - ".$c1->getBairro().",CEP ".$c1->getCep()."</strong>\n";?><!--<?php	echo "você está logado com:<strong>$_SESSION[email]</strong>\n";?>--></h4><!--<?php echo "\tBem vindo ao painel Residencial!\n"; ?>--><br><!--<input type=button id="exitbutton"value="exit" onclick="href=exit()">-->
 <div id="footer"><footer id="footerdados">
         	<div id="conf">
 <form id="conf">
@@ -37,7 +43,7 @@ alert(nome);
 <input type="phone" style="background-color:transparent;"></input>
           </form>
   </div>
-													Alexsander,Alexsey & Edcarlos
+													<?php echo "$ceo_gdx, $ceo_vst";?> & Edcarlos
 		<!--Alexsander,Alexsey & Edcarlos--> 												Rebouças  
 												&copy; Copyright 2017 Vostrus sec & GoldxEnginharia</footer></div>
 </body></pre>
