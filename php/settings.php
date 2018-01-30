@@ -34,7 +34,7 @@ alert(nome);
 	}
 </script>
 <label>nome</label>
-<input type="text"  style="background-color:transparent;" onmouseout="nm();"></input>
+<input type="text"  style="background-color:transparent;" !--onmouseout="nm();"-- ></input>
 <label>email</label>
 <input type="email" id="stb" placeholder="<?php echo $_SESSION['email']?>" style="background-color:transparent;"></input>
 <label>senha</label>
