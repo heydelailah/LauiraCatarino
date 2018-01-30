@@ -33,13 +33,13 @@ function nm(){
 alert(nome);
 	}
 </script>
-<label>nome</label>
+<label>Edfício</label>
 <input type="text"  style="background-color:transparent;" !--onmouseout="nm();"-- ></input>
-<label>email</label>
+<label>Embasa</label>
 <input type="email" id="stb" placeholder="<?php echo $_SESSION['email']?>" style="background-color:transparent;"></input>
-<label>senha</label>
+<label>Limpeza</label>
 <input type="password" style="background-color:transparent;"></input>
-<label>telefone</label>
+<label>Condomínio</label>
 <input type="phone" style="background-color:transparent;"></input>
           </form>
   </div>

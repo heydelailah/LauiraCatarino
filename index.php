@@ -30,8 +30,8 @@ catch(PDOException $e){
 $buscar_sindico=$conexao_banco->prepare("select * from morador");
 $buscar_sindico->execute();
 while($x=$buscar_sindico->fetch(PDO::FETCH_ASSOC)){
-echo "nome:".$x["nome"]."<br>";
-	echo "pass:".$x["pass"];
+//echo "nome:".$x["nome"]."<br>";
+//	echo "pass:".$x["pass"];
 
 }
 	//$buscar_sindico->execute();
